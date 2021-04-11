@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* @import url("style-media.css") screen and (max/min-width:??); */
+
+/* 초기화 */
+*{margin:0; padding:0; box-sizing:border-box;}
+ul {list-style:none;}
+a {text-decoration:none; color:inherit;}
+.blind {position:absolute; left:-9999em;}
+body {font-size:14px; font-family:"맑은 고딕", sans-serif;}
+
+/* 공통 */
+.container {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex; /* 바로 아래 자식에게 해당 (수평축으로 적용) */
+}
+/* 헤더 */
+#header {
+    background-color:#170B3B;
+}
+#header .container {
+    height:90px;
+    justify-content:space-between; /* 주축으로 고르게 분포 */
+    align-items:center; /* */
+}
+#header h1 img {
+    width:120px;
+    height:60px;
+}
+.lnb ul {
+    display:flex;
+    color:#fff;
+}
+.lnb ul li {
+    margin:0 30px; /* 마진은 글자 위에서만 마우스 손모양 / 패딩은 범위 */
+    font-size:1.2em;
+    font-weight:700;
+}
+.lnb ul li:hover {
+    color:yellow;
+}
+
+/* 메뉴바 설정하기 오류 */
+/*
+.lnb .depth2 {
+    position:absolute;
+    top:64px;
+    left:0;
+    width:100%;
+    background-color:#286abc;
+    text-align:left;
+    padding:20px;
+    display:none;
+}
+.lnb .depth2 a {
+    display:block;
+    color:rgba(255, 255, 255, 0.8);
+    line-height:32px;
+    font-size:15px;
+}
+*/
+
+.langSelect {
+    position:relative; /* 부모 설정 */
+}
+.langSelect p {
+    width:120px;
+    height:32px;
+    background-color:#fff;
+    cursor:pointer;
+}
+.langSelect p::after {
+    content:"▼"; /* 특수기호입력 */
+    position:absolute;
+    top:0; right:10px;
+}
+.langSelect ul {
+    position:absolute; /* 부모 기준 적용 */
+    top:32px; left:0;
+    width:100%;
+    background-color:#fff;
+    display:none;
+}
+.langSelect p:hover + ul,
+.langSelect ul:hover {display:block;}
+
+/* 메인 비주얼 */
+#main-visual {
+    background:url(img/img001.png) no-repeat center top;
+    overflow:hidden;
+}
+#main-visual .text-area {
+    width:390px;
+    height:160px;
+    margin:80px auto;
+    background:url(img/visual_text.png) no-repeat;
+    text-indent:-9999em;
+}
+.quick-menu ul {
+    display:flex;
+    justify-content:center;
+    margin-bottom:60px;
+}
+.quick-menu ul li {
+    width:160px;
+    height:140px;
+}
+.quick-menu ul li a {
+    display:block;
+    height:140px;
+    padding-top:90px;
+    background-color:rgba(35, 126, 239, 0.8);
+    color:#fff;
+    text-align:center;
+    background-repeat:no-repeat;
+    background-position:center 20px;
+}
+.quick-menu ul li:nth-child(1) a {
+    background-image:url(img/quick0_on.png);
+    background-color:rgba(255, 128, 64, 0.8);
+}
+.quick-menu ul li:nth-child(2) a {
+    background-image:url(img/quick1_on.png);
+}
+.quick-menu ul li:nth-child(3) a {
+    background-image:url(img/quick2_on.png);
+}
+.quick-menu ul li:nth-child(4) a {
+    background-image:url(img/quick3_on.png);
+}
+.quick-menu ul li:nth-child(5) a {
+    background-image:url(img/quick4_on.png);
+}
+.quick-menu ul li:nth-child(6) a {
+    background-image:url(img/quick5_on.png);
+    background-color:rgba(21, 193, 34, 0.8);
+}
+/* 본문 */
+#content {
+    width:1140px;
+    margin:40px auto;
+    display:flex;
+    flex-wrap:wrap; /* 플렉스 줄 바꿈을 위해 사용 */
+}
+#content article {
+    width:360px;
+    margin:0 10px 20px 10px;
+    position:relative; /* 부모 설정 */
+}
+#content article h3 {
+    height:42px;
+    line-height:40px;
+}
+#content article:nth-of-type(2) h3,
+#content article:nth-of-type(6) h3 {
+    border-bottom:2px solid;
+}
+#content article .moreBtn {
+    position:absolute;
+    top:10px; right:10px;
+}
+/* 전시관소식 리스트 */
+.board li {
+    margin-top:12px;
+    padding-right:80px;
+    position:relative;
+}
+.board li a {
+    display:block;
+    white-space:nowrap; /* 범위를 초과하여 2줄 표시 -> 1줄로 표시 */
+    overflow:hidden; /* 넘처나는 부분을 안보이게하기 */
+    text-overflow:ellipsis; /* 넘처나는 부분을 ...로 표시 */
+}
+.board li span {
+    position:absolute;
+    top:0; right:0;
+    color:#999;
+}
+/* 푸터 */
+#footer {
+    background-color:#222;
+}
+#footer .container {
+    height:90px;
+    align-items:center;
+}
+#footer .copy {
+    margin-left:40px;
+    margin-right:auto; /* 남은 영역 끝까지 설정 */
+    color:#ddd;
+}
+#footer .copy small {
+    color:#666;
+}

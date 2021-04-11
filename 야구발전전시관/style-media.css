@@ -1,0 +1,35 @@
+/* @media screen and (max-width:1199px) { */
+    /* 헤더 */
+    .lnb, .langSelect {display:none;}
+    #header h1 {
+        width:120px; 
+        height:60px; 
+        margin:0 auto;
+    }
+    /* 메인 비주얼 */
+    .quick-menu ul {
+        width:60%;
+        flex-wrap:wrap; /* 범위 초과 줄 바꿈 */
+        margin:0 auto 60px;
+    }
+    .quick-menu ul li {
+        width:33.3333%;
+    }
+}
+/* 본문 */
+#content {
+    width:80%;
+}
+#content article { /* 각 컨텐츠 하나당 */
+    width:48%;
+    margin:0 1% 20px 1%;
+}
+#content article img {width:100%;}
+/* 푸터 */
+#footer .footlogo, #footer .sns {display:none;}
+#footer .copy {
+    flex:1;
+    margin-left:0;
+    margin-right:0;
+    text-align:center;
+}
