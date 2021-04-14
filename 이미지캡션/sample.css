@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html, body {
+    height:100%;
+}
+#wrap {
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.item {
+    width:300px;
+    height:500px;
+    margin:0 40px;
+    position:relative;
+    overflow:hidden;
+}
+.item .img {
+    width:100%;
+    transition:0.4s
+}
+.item .caption {
+    position:absolute;
+    left:0; right:0;
+    bottom:0px;
+    height:60px;
+    background-color:#000;
+    text-align:center;
+    line-height:60px;
+    color:#fff;
+    opacity:0;
+}
+.item .shadow {
+    position:absolute;
+    top:0; left:0;
+    bottom:0; right:0;
+    box-shadow:inset 5px 5px 20px rgba(0, 0, 0, .2);
+    opacity:0;  
+}
+
