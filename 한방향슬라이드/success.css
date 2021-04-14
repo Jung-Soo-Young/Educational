@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style:none;
+}
+#container {
+    width:320px;
+    height:240px;
+    margin:50px auto;
+    position:relative;
+}
+.slide_wrap {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.slide {width:960px;}
+.slide li {float:left;}
+.controls p {
+    position:absolute;
+    top:calc(50% - 25px);
+}
+.controls .prev {
+    right:calc(100% + 20px);
+}
+.controls .next {
+    left:calc(100% + 20px);
+}
