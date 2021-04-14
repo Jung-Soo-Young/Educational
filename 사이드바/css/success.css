@@ -1,0 +1,60 @@
+@charest "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+ul {
+    list-style:none;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+img {
+    vertical-align:top;
+}
+
+h1 {
+    height:232px;
+    border-bottom:2px solid #ddd;
+    text-align:center;
+}
+section {text-align:center;}
+
+/* 서랍메뉴 */
+.aside {
+    width:220px;
+    height:100%;
+    position:fixed;
+    top:0; right:-220px;
+    padding:20px;
+    background-color:#fff;
+    border-left:1px solid #ddd;
+}
+.quick {
+    margin-top:20px;   
+}
+.quick li a {
+    display:block;
+    height:40px;
+    border:1px solid #ddd;
+    margin-bottom:5px;
+    text-align:center;
+    line-height:40px;
+}
+.aside button {
+    position:absolute;
+    top:200px; left:-56px;
+    display:block;
+    width:56px; height:132px;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-right:0;
+    outline:0;
+    cursor:pointer;
+}
